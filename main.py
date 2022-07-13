@@ -1,13 +1,15 @@
 def func_description(func, ):
     print(func.__name__)
-    print(func.__code__.co_varnames)
+    arguments = func.__code__.co_varnames
+
+    print(*arguments) if len(arguments) > 0 else print("No arguments in function")
+
     print('***')
 
 
 def open_browser(browser_name):
     func_description(open_browser)
     pass
-
 
 def go_to_companyname_homepage(page_url):
     func_description(go_to_companyname_homepage)
